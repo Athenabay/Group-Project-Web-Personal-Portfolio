@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davino Hazzelio Marzel - Portfolio</title>
+    <link rel="stylesheet" href="davino_style.css">
+    <style>
+        .hero-overlay {
+            background: linear-gradient(to top, #141414 10%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.8) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8); letter-spacing: 2px;">Davino Hazzelio Marzel</h1>
+            <p class="subtitle">Information Technology | Cyber Security & Cloud Security Engineering</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary">▶ Play Resume</a>
+                <a href="#contact" class="btn btn-secondary">ℹ More Info</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about" class="content-row">
+            <h2 class="row-title">Education Journey</h2>
+            <div class="row-box">
+                <ol>
+                    <li><strong>President University</strong> - Information Technology (2026 - Present)</li>
+                    <li><strong>SMA Negeri 4 Jakarta</strong> - High School Graduate</li>
+                </ol>
+                <br>
+                <h2 class="row-title">My Top Priorities</h2>
+                <ol>
+                    <li>Mastering Cloud Security Infrastructure</li>
+                    <li>Developing Automated System Workflows</li>
+                    <li>Maintaining Academic Excellence</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="content-row">
+            <h2 class="row-title">Tech Stack & Proficiency</h2>
+            <div class="row-box">
+                <table class="skills-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Technologies</th>
+                            <th>Proficiency</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Programming Languages</td>
+                            <td>C, Python, HTML/CSS, JavaScript</td>
+                            <td>Advanced</td>
+                        </tr>
+                        <tr>
+                            <td>Hardware & IoT</td>
+                            <td>Arduino Uno, Microcontrollers, Relay Modules</td>
+                            <td>Intermediate</td>
+                        </tr>
+                        <tr>
+                            <td>Tools & Workflows</td>
+                            <td>GitHub, Docker, Notion APIs, 9Router, Hermes, Linux</td>
+                            <td>Intermediate</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="content-row">
+            <h2 class="row-title">Beyond The Screen (Hobbies)</h2>
+            <div class="row-box flex-lists">
+                <div>
+                    <h3>Athletics & Sports</h3>
+                    <ul>
+                        <li>Basketball</li>
+                        <li>Gym & Strength Training</li>
+                        <li>Digital Literacy</li>
+                        <li>Bowling & Golf</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Leisure & Interests</h3>
+                    <ul>
+                        <li>Pokémon Trading Card Collection</li>
+                        <li>Exploring Music Bar (jazz bar, RnB Bar)</li>
+                        <li>Hardware Troubleshooting</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-row">
+            <h2 class="row-title">Establish Secure Connection (contact me)</h2>
+            <div class="row-box form-box">
+                <form action="#" method="POST" onsubmit="alert('Form submitted successfully!'); return false;">
+                    <div class="form-group">
+                        <label for="name">Alias / Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="pass">Access Key (Password):</label>
+                        <input type="password" id="pass" name="pass" required placeholder="Enter access key">
+                    </div>
+                    <div class="form-group">
+                        <label for="purpose">Connection Purpose (Selection):</label>
+                        <select id="purpose" name="purpose" required>
+                            <option value="">-- Select Purpose --</option>
+                            <option value="project">Project Collaboration</option>
+                            <option value="hiring">Recruitment / Hiring</option>
+                            <option value="casual">Casual Networking (Basketball, TCG Pokemon, etc.)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Protocol (Radio):</label><br>
+                        <input type="radio" id="email_pref" name="contact_pref" value="email" required>
+                        <label for="email_pref">Email</label>
+                        <input type="radio" id="wa_pref" name="contact_pref" value="whatsapp">
+                        <label for="wa_pref">WhatsApp</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Encrypted Message (Textarea):</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Type your message here..."></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="human" name="human" required>
+                        <label for="human">I verify that I am human (Checkbox)</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">Transmit Data</button>
+                    <a href="../main.html" class="back-button">Back To Group menu web</a>
+                </form>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

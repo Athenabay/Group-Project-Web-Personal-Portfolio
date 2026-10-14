@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact & Registration - Okky Christian</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0f12;
+      color: #cbd5e1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 3rem 8%;
+      /* Memberikan jarak bawah agar konten tidak tertutup fixed footer */
+      padding-bottom: 90px;
+      box-sizing: border-box;
+    }
+    .page-title { 
+      font-size: 2.25rem; 
+      color: #ffffff; 
+      margin-bottom: 0.5rem; 
+      font-weight: 800;
+    }
+    .subtitle { 
+      color: #38bdf8; 
+      margin-bottom: 2rem; 
+      font-weight: 600; 
+    }
+
+    .form-container {
+      background: #161b24;
+      border: 1px solid #1e293b;
+      padding: 2rem;
+      border-radius: 16px;
+      max-width: 650px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      margin-bottom: 6px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 10px 14px;
+      background: #0d0f12;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      color: #fff;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: #38bdf8;
+    }
+    .radio-group, .checkbox-group {
+      display: flex;
+      gap: 1.25rem;
+      margin-top: 6px;
+      flex-wrap: wrap;
+    }
+    .radio-label, .checkbox-label {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+    .btn-submit {
+      background: #38bdf8;
+      color: #0d0f12;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      font-size: 0.95rem;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn-submit:hover {
+      background: #7dd3fc;
+      transform: translateY(-1px);
+    }
+
+    /* Fixed Bottom Footer - Posisi di Kiri */
+    .fixed-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 55px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 2rem;
+      background: rgba(13, 17, 23, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+      box-sizing: border-box;
+    }
+
+    .footer-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      border-radius: 30px;
+      background: rgba(56, 189, 248, 0.12);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      transition: all 0.25s ease;
+    }
+
+    .footer-back-btn:hover {
+      background: #38bdf8;
+      color: #0d1117;
+      border-color: #38bdf8;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .footer-back-btn svg {
+      transition: transform 0.25s ease;
+    }
+
+    .footer-back-btn:hover svg {
+      transform: translateX(-3px);
+    }
+  </style>
+</head>
+<body>
+  <h1 class="page-title">Initiate Contact & Inquiry</h1>
+  <p class="subtitle">Direct Consultation & Climbing Class Registration</p>
+
+  <div class="form-container">
+    <form id="contactForm">
+      
+      <div class="form-group">
+        <label for="fullName">Full Name *</label>
+        <input type="text" id="fullName" class="form-control" placeholder="e.g. Okky Christian" required>
+      </div>
+
+      <div class="form-group">
+        <label for="securityPin">Client / Member Passcode *</label>
+        <input type="password" id="securityPin" class="form-control" placeholder="Enter 4-digit code" required minlength="4">
+      </div>
+
+      <div class="form-group">
+        <label for="budgetSelect">Climbing Class Level & Price</label>
+        <select id="budgetSelect" class="form-control">
+          <option value="beginner">Beginner Class (Rp 900.000 - Rp 1.200.000)</option>
+          <option value="intermediate" selected>Intermediate Class (Rp 1.500.000 - Rp 1.800.000)</option>
+          <option value="advanced">Advanced Class (Rp 2.000.000 - Rp 2.500.000)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Training Schedule Preference</label>
+        <div class="radio-group">
+          <label class="radio-label"><input type="radio" name="trainingSchedule" value="weekday" checked> Weekday (Tue / Thu)</label>
+          <label class="radio-label"><input type="radio" name="trainingSchedule" value="weekend"> Weekend (Sat / Sun)</label>
+          <label class="radio-label"><input type="radio" name="trainingSchedule" value="private"> Private 1-on-1</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Include Equipment & Gear Rental</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label"><input type="checkbox" name="services" value="shoes" checked> Climbing Shoes (Rp 35.000)</label>
+          <label class="checkbox-label"><input type="checkbox" name="services" value="harness" checked> Harness & Belay Device (Rp 45.000)</label>
+          <label class="checkbox-label"><input type="checkbox" name="services" value="chalk"> Chalk Bag & Magnesium (Rp 20.000)</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Inquiry Details & Requirements *</label>
+        <textarea id="message" rows="4" class="form-control" placeholder="Tell me about your experience or specific training goals..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Send Transmission</button>
+      
+    </form>
+  </div>
+
+  <!-- Fixed Bottom Footer dengan Tombol di Kiri -->
+  <footer class="fixed-footer">
+    <a href="../../main.html" class="footer-back-btn" target="_top">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      <span>Back to group web</span>
+    </a>
+  </footer>
+
+</body>
+</html>

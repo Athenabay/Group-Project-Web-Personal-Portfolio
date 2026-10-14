@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About - Okky Christian</title>
+  <link rel="stylesheet" href="style_okky.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0f12;
+      color: #cbd5e1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 3rem 8%;
+      /* Memberikan jarak bawah agar konten tidak tertutup fixed footer */
+      padding-bottom: 90px;
+      box-sizing: border-box;
+    }
+    .page-title {
+      font-size: 2.25rem;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      color: #38bdf8;
+      margin-bottom: 2.5rem;
+      font-weight: 600;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .bio-card {
+      background: #161b24;
+      border: 1px solid #1e293b;
+      padding: 2rem;
+      border-radius: 16px;
+      line-height: 1.7;
+    }
+    .meta-box {
+      background: #11151c;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+    .meta-item {
+      margin-bottom: 1rem;
+    }
+    .meta-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #64748b;
+    }
+    .meta-value {
+      font-weight: 600;
+      color: #f1f5f9;
+      font-size: 0.95rem;
+    }
+
+    /* Fixed Bottom Footer - Posisi di Kiri */
+    .fixed-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 55px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 2rem;
+      background: rgba(13, 17, 23, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+      box-sizing: border-box;
+    }
+
+    .footer-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      border-radius: 30px;
+      background: rgba(56, 189, 248, 0.12);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      transition: all 0.25s ease;
+    }
+
+    .footer-back-btn:hover {
+      background: #38bdf8;
+      color: #0d1117;
+      border-color: #38bdf8;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .footer-back-btn svg {
+      transition: transform 0.25s ease;
+    }
+
+    .footer-back-btn:hover svg {
+      transform: translateX(-3px);
+    }
+  </style>
+</head>
+<body>
+  <h1 class="page-title">About Okky Christian</h1>
+  <p class="subtitle">Fast Learner, Likes Challanges, Detail-Oriented</p>
+
+  <div class="about-grid">
+    <!-- Meta Info Box -->
+    <div class="meta-box">
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <div style="
+          width: 100px; 
+          height: 100px; 
+          border-radius: 50%; 
+          background-color: #1e293b; 
+          background-image: url('assetky/Photo 1.jpg'); 
+          background-size: cover; 
+          background-position: center 35%; 
+          background-repeat: no-repeat; 
+          margin: 0 auto 1rem auto; 
+          border: 2px solid #38bdf8;">
+        </div>
+        <h3 style="color: #fff; margin: 0;">Okky Christian</h3>
+        <p style="color: #64748b; font-size: 0.85rem; margin-top: 2px;">Freshman of President University</p>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Location</div>
+        <div class="meta-value">Tangerang, Indonesia</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Direct Email</div>
+        <div class="meta-value" style="color: #38bdf8;">okkychristian@student.president.ac.id</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Phone Contact</div>
+        <div class="meta-value">+62 81268886210</div>
+      </div>
+      <div class="meta-item" style="margin-bottom: 0;">
+        <div class="meta-label">Availability</div>
+        <div class="meta-value" style="color: #10b981;">Available</div>
+      </div>
+    </div>
+
+    <!-- Bio Text Content -->
+    <div class="bio-card">
+      <h2 style="color: #fff; font-size: 1.3rem; margin-top: 0;">About Me</h2>
+      <p>I am a passionate of troubleshooting, and looking for new skills i can learn from anywhere not only about hardskills but also softskills like languages and I have some experience on sport climbing for the past 3 years.</p>
+      
+      <p style="margin-top: 1rem;">Over the past year i've wanted to learn so many things especially about 中文, it's been my dream to connect with the world, either it's by academic or non-academic.</p>
+
+      <div style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <div style="background: #0d0f12; padding: 1rem; border-radius: 8px; border-left: 3px solid #38bdf8;">
+          <h4 style="margin: 0; color: #fff;">Internship</h4>
+          <span style="font-size: 0.8rem; color: #64748b;">Industry Experience</span>
+        </div>
+        <div style="background: #0d0f12; padding: 1rem; border-radius: 8px; border-left: 3px solid #f59e0b;">
+          <h4 style="margin: 0; color: #fff;">Climbing Instructor</h4>
+          <span style="font-size: 0.8rem; color: #64748b;">At Bremgra Indonesia</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fixed Bottom Footer dengan Tombol di Kiri -->
+  <footer class="fixed-footer">
+    <a href="../../main.html" class="footer-back-btn" target="_top">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      <span>Back to group web</span>
+    </a>
+  </footer>
+</body>
+</html>

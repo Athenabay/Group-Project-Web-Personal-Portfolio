@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume - Okky Christian</title>
+  <link rel="stylesheet" href="style_okky.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0f12;
+      color: #cbd5e1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 3rem 8%;
+      /* Memberikan jarak bawah, konten gak tertutup fixed footer */
+      padding-bottom: 90px;
+      box-sizing: border-box;
+    }
+    .page-title { font-size: 2.25rem; color: #ffffff; margin-bottom: 0.5rem; }
+    .subtitle { color: #38bdf8; margin-bottom: 2rem; font-weight: 600; }
+    
+    .section-title {
+      font-size: 1.25rem;
+      color: #ffffff;
+      border-bottom: 1px solid #1e293b;
+      padding-bottom: 0.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #161b24;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+    .skills-table th, .skills-table td {
+      padding: 12px 18px;
+      text-align: left;
+      border-bottom: 1px solid #1f2937;
+    }
+    .skills-table th {
+      background: #11151c;
+      color: #38bdf8;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    ol.timeline-list {
+      padding-left: 1.2rem;
+    }
+    ol.timeline-list li {
+      margin-bottom: 1.5rem;
+      padding-left: 0.5rem;
+    }
+    ol.timeline-list li::marker {
+      color: #38bdf8;
+      font-weight: bold;
+    }
+
+    ul.skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      list-style-type: none;
+      padding: 0;
+    }
+    ul.skills-list li {
+      background: #161b24;
+      border: 1px solid #1e293b;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    ul.skills-list li::before {
+      content: "⚡";
+      font-size: 0.8rem;
+    }
+
+    /* Fixed Bottom Footer - Posisi di Kiri */
+    .fixed-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 55px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 2rem;
+      background: rgba(13, 17, 23, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+      box-sizing: border-box;
+    }
+
+    .footer-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      border-radius: 30px;
+      background: rgba(56, 189, 248, 0.12);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      transition: all 0.25s ease;
+    }
+
+    .footer-back-btn:hover {
+      background: #38bdf8;
+      color: #0d1117;
+      border-color: #38bdf8;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .footer-back-btn svg {
+      transition: transform 0.25s ease;
+    }
+
+    .footer-back-btn:hover svg {
+      transform: translateX(-3px);
+    }
+  </style>
+</head>
+<body>
+  <h1 class="page-title">Experience & Qualifications</h1>
+  <p class="subtitle">Technical Proficiency & Career Timeline</p>
+
+  <h2 class="section-title">Software Proficiency Matrix</h2>
+  <table class="skills-table">
+    <thead>
+      <tr>
+        <th>Software / Tool</th>
+        <th>Category</th>
+        <th>Years Experience</th>
+        <th>Proficiency Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-weight: 600; color: #fff;">Cisco Packet Tracer</td>
+        <td>Computer Networking</td>
+        <td>2.5 Years</td>
+        <td><span style="color: #62f838;">Advanced (59%)</span></td>
+      </tr>
+      <tr>
+        <td style="font-weight: 600; color: #fff;">Oracle VirtualBox</td>
+        <td>Computer Networking</td>
+        <td>2 Years</td>
+        <td><span style="color:  #38bdf8;">Intermediate (47%)</span></td>
+      </tr>
+      <tr>
+        <td style="font-weight: 600; color: #fff;">HTML5 / CSS3 / Tailwind</td>
+        <td>Frontend Interface Code</td>
+        <td>8 Months</td>
+        <td><span style="color: #f59e0b;">Beginner (30%)</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="section-title">Career Milestones (Ordered Workflow)</h2>
+  <ol class="timeline-list">
+    <li>
+      <strong style="color: #fff; font-size: 1.05rem;">Climbing Instructor at BREMGRA INDONESIA</strong> (June 2026 - July 2026)
+      <p style="margin: 4px 0 0 0; font-size: 0.9rem;">Working as a full-time climbing instructor, use of safety equipment, and customer service.</p>
+    </li>
+    <li>
+      <strong style="color: #fff; font-size: 1.05rem;">Freelance at BREMGRA INDONESIA</strong> (February 2026 - June 2026)
+      <p style="margin: 4px 0 0 0; font-size: 0.9rem;">working as a freelancer assisting instructors who need extra personal.</p>
+    </li>
+    <li>
+      <strong style="color: #fff; font-size: 1.05rem;">Club Athlete and Belayer</strong> (2023 - 2026)
+      <p style="margin: 4px 0 0 0; font-size: 0.9rem;">Building a career in sport climbing and as a belayer in club, with an accident-free track record.</p>
+    </li>
+    <li>
+      <strong style="color: #fff; font-size: 1.05rem;">Internship at PT Sinar Inti Electrindo Raya</strong> (January 2025 - April 2025)
+      <p style="margin: 4px 0 0 0; font-size: 0.9rem;">Working as full-time IT Support, troubleshooting, managing LAN and WAN networks, maintaining network access, and managing the main server.</p>
+    </li>
+  </ol>
+
+  <h2 class="section-title">Education & Credentials</h2>
+  <ol class="timeline-list">
+    <li>
+      <strong style="color: #fff;">Freshman of President University</strong>
+      <div style="font-size: 0.85rem; color: #38bdf8;">Information Technology • 2026 - 2029</div>
+    </li>
+    <li>
+      <strong style="color: #fff;">Graduated from Bonavita Vocatioonal School</strong>
+      <div style="font-size: 0.85rem; color: #38bdf8;">Computer and Network Engineering • 2026</div>
+    </li>
+  </ol>
+
+  <div class="skills-block" style="margin-top: 2rem;">
+  <h3 style="color: #38bdf8; font-size: 0.95rem; font-weight: 700; margin-bottom: 10px; letter-spacing: 1px;">CORE COMPETENCIES</h3>
+  <ul style="color: #cbd5e1; line-height: 1.6; font-size: 0.9rem;">
+    <li>LAN & WAN Configuration</li>
+    <li>Hardware & Software Troubleshooting</li>
+    <li>Safety Management & Risk Control</li>
+  </ul>
+  </div>
+
+  <div class="skills-block" style="margin-top: 2rem;">
+  <h3 style="color: #38bdf8; font-size: 0.95rem; font-weight: 700; margin-bottom: 10px; letter-spacing: 1px;">PERSONAL SKILLS</h3>
+  <ul style="color: #cbd5e1; line-height: 1.6; font-size: 0.9rem;">
+    <li>Conscientious</li>
+    <li>Team Work</li>
+    <li>Organisation</li>
+  </ul>
+  </div>
+
+  <!-- Fixed Bottom Footer dengan Tombol di Kiri -->
+  <footer class="fixed-footer">
+    <a href="../../main.html" class="footer-back-btn" target="_top">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      <span>Back to group web</span>
+    </a>
+  </footer>
+
+</body>
+</html>

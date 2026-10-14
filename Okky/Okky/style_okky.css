@@ -1,0 +1,125 @@
+/* Seperated CSS Style File for Okky */
+:root {
+  --bg-dark: #0d0f12;
+  --bg-card: #161b24;
+  --bg-accent: #38bdf8;
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --border-color: #1f2937;
+  --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --line: #1e293b;
+  --mute: #64748b;
+  --red: #ef4444;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  padding-bottom: 90px; /* Jarak bawah agar konten tidak tertutup fixed footer */
+  box-sizing: border-box;
+}
+
+/* Base Link Reset */
+a {
+  color: var(--bg-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-accent);
+}
+
+/* Footer Biasa / Static Foot */
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Menjaga agar semua tombol & teks sejajar tinggi */
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: clamp(50px, 8vw, 110px);
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--mute);
+  font-size: .85rem;
+}
+
+.foot a {
+  color: var(--mute);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.foot a:hover {
+  color: var(--red);
+}
+
+/* Fixed Bottom Footer (Tombol Back to group web di kiri)*/
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2rem;
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+.footer-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border-radius: 30px;
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: all 0.25s ease;
+}
+
+.footer-back-btn:hover {
+  background: #38bdf8;
+  color: #0d1117;
+  border-color: #38bdf8;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.footer-back-btn svg {
+  transition: transform 0.25s ease;
+}
+
+.footer-back-btn:hover svg {
+  transform: translateX(-3px);
+}

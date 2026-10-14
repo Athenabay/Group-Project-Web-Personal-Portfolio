@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - My Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+
+    <main>
+        <h2>Contact Form</h2>
+
+        <form action="#" method="get">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+
+            <label for="password">Password:</label><br>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                minlength="8"
+                required>
+            <br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required></textarea>
+            <br><br>
+
+            <p>Preferred Contact Method:</p>
+
+            <input
+                type="radio"
+                id="email"
+                name="contact_method"
+                value="email"
+                required>
+            <label for="email">Email</label>
+
+            <input
+                type="radio"
+                id="phone"
+                name="contact_method"
+                value="phone">
+            <label for="phone">Phone</label>
+            <br><br>
+
+            <input
+                type="checkbox"
+                id="agreement"
+                name="agreement"
+                required>
+            <label for="agreement">
+                I agree to submit this form.
+            </label>
+            <br><br>
+
+            <label for="topic">Choose a topic:</label><br>
+            <select id="topic" name="topic" required>
+                <option value="">-- Select a topic --</option>
+                <option value="general">General Question</option>
+                <option value="project">Project Discussion</option>
+                <option value="collaboration">Collaboration</option>
+            </select>
+            <br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Personal Portfolio</p>
+    </footer>
+
+</body>
+</html>

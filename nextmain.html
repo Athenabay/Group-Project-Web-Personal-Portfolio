@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            /* Input gambar background utama Anda di bagian url('...'); */
+            background-image: url("walpaper\ windows\ xp.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #55aa55; /* Warna cadangan */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Gaya Jendela Retro (Window) */
+        .retro-window {
+            width: 700px;
+            height: 450px;
+            background: #c0c0c0;
+            border-top: 2px solid #ffffff;
+            border-left: 2px solid #ffffff;
+            border-right: 2px solid #404040;
+            border-bottom: 2px solid #404040;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Title Bar */
+        .title-bar {
+            background: #000080;
+            color: white;
+            padding: 4px 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .window-controls button {
+            background: #c0c0c0;
+            border-top: 1px solid #ffffff;
+            border-left: 1px solid #ffffff;
+            border-right: 1px solid #404040;
+            border-bottom: 1px solid #404040;
+            width: 16px;
+            height: 14px;
+            font-size: 9px;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 8px;
+        }
+
+        /* Menu Bar */
+        .menu-bar {
+            display: flex;
+            gap: 15px;
+            padding: 4px 8px;
+            font-size: 12px;
+            border-bottom: 1px solid #808080;
+            background: #c0c0c0;
+        }
+
+        .menu-bar span {
+            cursor: pointer;
+        }
+
+        .menu-bar span:hover {
+            background: #000080;
+            color: white;
+        }
+
+        /* Window Content Area */
+        .window-content {
+            flex: 1;
+            background: #ffffff;
+            margin: 6px;
+            border-top: 2px solid #404040;
+            border-left: 2px solid #404040;
+            border-right: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .content-title {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            color: #000;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .content-subtitle {
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Style Tombol Next Lingkaran di Pojok Kanan Bawah Kotak */
+        .next-btn-circle {
+            bottom: 20px;
+            right: 20px;
+            width: 90px;
+            height: 90px;
+            border-radius: 45px;
+            background: linear-gradient(45deg, #0284c7, #38bdf8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+            border: 4px solid #161b24;
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .next-btn-circle:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 35px rgba(56, 189, 248, 0.7);
+        }
+        /* Style Tombol Next Gambar di Pojok Kanan Bawah Kotak */
+.next-image-link {
+    bottom: 20px;
+    left: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.next-image-btn {
+    width: 1200px; /* Atur ukuran lebar gambar sesuai kebutuhan */
+    height: auto;
+    cursor: pointer;
+    display: block;
+    transition: transform 0.1s ease;
+    
+    /* Tambahan Border untuk Gambar */
+    border: 3px solid #000080; /* Ketebalan, jenis garis, dan warna border (bisa diganti) */
+    border-radius: 8px;       /* Membuat sudut border sedikit melengkung (opsional) */
+    background-color: #000000; /* Warna latar belakang di dalam border jika gambar transparan */
+    padding: 4px;             /* Jarak antara gambar dan border */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+}
+
+.next-image-link:active .next-image-btn {
+    transform: scale(0.95); /* Efek sedikit mengecil saat diklik */
+}
+
+/* Mengatur wadah agar foto tersusun 3 kolom x 2 baris */
+.window-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom sejajar */
+    gap: 15px;                            /* Jarak antar foto */
+    padding: 20px;                         /* Jarak di dalam jendela */
+    justify-items: center;                 /* Posisi foto tepat di tengah tiap sel */
+    align-items: center;
+}
+
+.next-image-btn {
+    width: 100%;                           /* Ukuran menyesuaikan grid */
+    max-width: 120px;  
+    max-height: 120px;                    /* Batas lebar maksimal foto */
+    height: auto;
+    cursor: pointer;
+    display: block;
+    transition: transform 0.1s ease;
+    
+    /* Tambahan Border untuk Gambar */
+    border: 3px solid #000080;
+    border-radius: 8px;
+    background-color: #000000;
+    padding: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.next-image-link:active .next-image-btn {
+    transform: scale(0.95);
+}
+
+.windows-taskbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 48px;
+            background: rgba(243, 243, 243, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Mengatur isi taskbar agar rata kiri */
+            padding: 2 8px;
+            z-index: 9999;
+        }
+
+        .taskbar-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .win-start-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 110px;
+            height: 40px;
+            border-radius: 4px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: background 0.15s ease, transform 0.1s ease;
+            padding: 0;
+            outline: none;
+        }
+
+        .win-start-btn:hover {
+            background: rgba(0, 0, 0, 0.08);
+        }
+
+        .win-start-btn:active {
+            background: rgba(0, 0, 0, 0.12);
+            transform: scale(0.95);
+        }
+
+        /* Mengatur gambar PNG di dalam tombol Start */
+        .win-start-btn img {
+            width: 100px;
+            height: 130px;
+            object-fit: contain;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Jendela Utama -->
+    <div class="retro-window">
+        <!-- Title Bar -->
+        <div class="title-bar">
+            <span>Portfolio.exe</span>
+            <div class="window-controls">
+                <button>-</button>
+                <button>□</button>
+                <a href="main.html">
+                    <button>✕</button>
+                </a>
+                
+            </div>
+        </div>
+
+        <!-- Menu Bar -->
+        <div class="menu-bar">
+            <span>File</span>
+            <span>Edit</span>
+            <span>View</span>
+            <span>Help</span>
+        </div>
+
+        <!-- Content Area -->
+        <div class="window-content">
+
+            <a href="Akbar/index2.html" class="next-image-link">
+                <img src="HTML UTAMA/testing/assets/fotogweh.jpeg" alt="Foto 1" class="next-image-btn">
+            </a>
+
+            <a href="Okky/Okky/index_okky.html" class="next-image-link">
+                <img src="HTML UTAMA/testing/assets/okicinuy.jpeg" alt="Foto 2" class="next-image-btn">
+            </a>
+
+            <a href="rey/index.html" class="next-image-link">
+                <img src="HTML UTAMA/testing/assets/rey gantenk.jpeg" alt="Foto 3" class="next-image-btn">
+            </a>
+
+            <a href="harazaki-project/indexzaki.html" class="next-image-link">
+                <img src="HTML UTAMA/testing/assets/jaki.jpeg" alt="Foto 4" class="next-image-btn">
+            </a>
+
+            <a href="Jansen/indexjansen.html" class="next-image-link">
+                <img src="HTML UTAMA/testing/assets/jansenganteng.jpeg" alt="Foto 5" class="next-image-btn">
+            </a>
+
+            <a href="Web_Davin/davino-portofolio.html" class="next-image-link">
+                <img src="HTML UTAMA/testing/assets/davino.jpeg" alt="Foto 6" class="next-image-btn">
+            </a>
+            
+        </div>
+        
+
+    </div>
+            <footer>
+                <div class="windows-taskbar">
+        <div class="taskbar-left">
+            <button class="win-start-btn" title="Start" aria-label="Start">
+                <img src="Screenshot 2026-10-14 000034.png" alt="Start Logo">
+            </button>
+        </div>
+            </footer>
+            
+    </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contact & Form - Harazaki</title>
+<link rel="stylesheet" href="../csszaki/stylezaki.css">
+<style>
+  .form-box { 
+    border: 2px solid var(--rule); 
+    padding: 20px; 
+    max-width: 650px; 
+    margin: 10px auto; 
+    background-color: var(--paper-2); 
+  }
+  .form-box label { 
+    font-weight: bold; 
+    display: block; 
+    margin-top: 12px; 
+    font-size: 14px;
+  }
+  .form-box input[type="text"], 
+  .form-box input[type="password"], 
+  .form-box select, 
+  .form-box textarea { 
+    width: 100%; 
+    padding: 8px; 
+    margin-top: 4px; 
+    border: 1px solid var(--rule); 
+    background-color: var(--paper); 
+    color: var(--ink); 
+    font-family: inherit; 
+  }
+  .form-box button { 
+    margin-top: 18px; 
+    padding: 10px 22px; 
+    background-color: var(--ink); 
+    color: var(--paper); 
+    border: none; 
+    cursor: pointer; 
+    font-weight: bold; 
+    font-size: 15px;
+  }
+  .form-box button:hover {
+    background-color: var(--red);
+  }
+</style>
+</head>
+<body style="padding: 15px;">
+    <section>
+      <div class="sec-title"><h2>Classifieds & Application Form</h2></div>
+      
+      <div class="form-box">
+        <h3 style="text-align: center; margin-bottom: 15px;">Get In Touch / Project Inquiry</h3>
+        
+        <!-- FORM DENGAN VALIDASI JAVASCRIPT -->
+        <form id="contactForm" onsubmit="return validateZakiForm()">
+          
+          <!-- a. Text Input -->
+          <label for="fname">Full Name:</label>
+          <input type="text" id="fname" placeholder="Enter your full name">
+
+          <!-- b. Password Input -->
+          <label for="fpass">Security Passcode:</label>
+          <input type="password" id="fpass" placeholder="Enter passcode (min 5 characters)">
+
+          <!-- d. Radio Buttons -->
+          <label>Inquiry Type:</label>
+          <div style="margin-top: 5px;">
+            <input type="radio" id="type1" name="inquiry_type" value="Collaboration" checked> 
+            <label for="type1" style="display:inline; font-weight:normal;">Collaboration</label> &nbsp;&nbsp;
+            <input type="radio" id="type2" name="inquiry_type" value="General"> 
+            <label for="type2" style="display:inline; font-weight:normal;">General Inquiry</label>
+          </div>
+
+          <!-- f. Selection (Dropdown) -->
+          <label for="ftopic">Topic of Interest:</label>
+          <select id="ftopic">
+            <option value="cybersecurity">Cybersecurity</option>
+            <option value="webdev">Web Development</option>
+            <option value="mc">MC & Event Hosting</option>
+          </select>
+
+          <!-- c. Textarea -->
+          <label for="fmsg">Message Details:</label>
+          <textarea id="fmsg" rows="4" placeholder="Write your message here..."></textarea>
+
+          <!-- e. Checkbox -->
+          <div style="margin-top: 15px;">
+            <input type="checkbox" id="fcheck"> 
+            <label for="fcheck" style="display:inline; font-weight:normal;">I confirm that the information provided is accurate.</label>
+          </div>
+
+          <!-- g. Submit Button -->
+          <button type="submit">Submit Form</button>
+        </form>
+      </div>
+
+      <div style="margin-top: 25px; text-align: center; font-size: 14px;">
+        <p><strong>Email:</strong> <a href="mailto:harazakihulu9@gmail.com">harazakihulu9@gmail.com</a></p>
+        <p><strong>Socials:</strong> <a href="https://www.linkedin.com/in/harazaki-hulu-6848a4432" target="_blank">LinkedIn</a> · <a href="https://www.instagram.com/hrzki_hl" target="_blank">Instagram @hrzki_hl</a></p>
+      </div>
+    </section>
+
+    <script>
+      function validateZakiForm() {
+        var name = document.getElementById("fname").value.trim();
+        var pass = document.getElementById("fpass").value;
+        var msg = document.getElementById("fmsg").value.trim();
+        var isChecked = document.getElementById("fcheck").checked;
+
+        if (name === "") {
+          alert("Error: Full Name field cannot be empty!");
+          return false;
+        }
+        if (pass.length < 5) {
+          alert("Error: Passcode must be at least 5 characters long!");
+          return false;
+        }
+        if (msg === "") {
+          alert("Error: Message Details field cannot be empty!");
+          return false;
+        }
+        if (!isChecked) {
+          alert("Error: You must check the confirmation checkbox before submitting!");
+          return false;
+        }
+
+        alert("Success! Your form has been validated and submitted successfully.");
+        return true;
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace; /* Gaya font retro */
+        }
+
+        body {
+            background-image: url("walpaper\ windows\ xp.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #55aa55; /* Warna cadangan kl background error*/
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .retro-window {
+            width: 700px;
+            height: 450px;
+            background: #c0c0c0;
+            border-top: 2px solid #ffffff;
+            border-left: 2px solid #ffffff;
+            border-right: 2px solid #404040;
+            border-bottom: 2px solid #404040;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title-bar {
+            background: #000080;
+            color: white;
+            padding: 4px 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .window-controls button {
+            background: #c0c0c0;
+            border-top: 1px solid #ffffff;
+            border-left: 1px solid #ffffff;
+            border-right: 1px solid #404040;
+            border-bottom: 1px solid #404040;
+            width: 16px;
+            height: 14px;
+            font-size: 9px;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 8px;
+        }
+
+        .menu-bar {
+            display: flex;
+            gap: 15px;
+            padding: 4px 8px;
+            font-size: 12px;
+            border-bottom: 1px solid #808080;
+            background: #c0c0c0;
+        }
+
+        .menu-bar span {
+            cursor: pointer;
+        }
+
+        .menu-bar span:hover {
+            background: #000080;
+            color: white;
+        }
+
+        /* Window Content Area */
+        .window-content {
+            flex: 1;
+            background: #ffffff;
+            margin: 6px;
+            border-top: 2px solid #404040;
+            border-left: 2px solid #404040;
+            border-right: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .content-title {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            color: #000;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .content-subtitle {
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Tombol Next di pojok kanan bawah kotak putih */
+        .next-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: #c0c0c0;
+            border-top: 2px solid #ffffff;
+            border-left: 2px solid #ffffff;
+            border-right: 2px solid #404040;
+            border-bottom: 2px solid #404040;
+            padding: 6px 20px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            color: #000;
+            text-align: center;
+        }
+
+        .next-btn:active {
+            border-top: 2px solid #404040;
+            border-left: 2px solid #404040;
+            border-right: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            padding-top: 7px;
+            padding-left: 21px;
+        }
+        .windows-taskbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 48px;
+            background: rgba(243, 243, 243, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 2 8px;
+            z-index: 9999;
+        }
+
+        .taskbar-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .win-start-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 110px;
+            height: 40px;
+            border-radius: 4px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: background 0.15s ease, transform 0.1s ease;
+            padding: 0;
+            outline: none;
+        }
+
+        .win-start-btn:hover {
+            background: rgba(0, 0, 0, 0.08);
+        }
+
+        .win-start-btn:active {
+            background: rgba(0, 0, 0, 0.12);
+            transform: scale(0.95);
+        }
+
+        .win-start-btn img {
+            width: 100px;
+            height: 130px;
+            object-fit: contain;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="retro-window">
+        <div class="title-bar">
+            <span>Portfolio.exe</span>
+            <div class="window-controls">
+                <button>-</button>
+                <button>□</button>
+                <button>✕</button>
+            </div>
+        </div>
+
+        <div class="menu-bar">
+            <span>File</span>
+            <span>Edit</span>
+            <span>View</span>
+            <span>Help</span>
+        </div>
+
+        <!--content yang didalam kotak-->
+        <div class="window-content">
+            <h1 class="content-title">In the next page,<br>Press one of our member picture<br>To see each portfolio of our member group</h1>
+            <p class="content-subtitle">Press the next button to see our portfolio</p>
+
+            <!-- Tombol Nextnya-->
+            <a href="nextmain.html" class="next-btn">Next</a>
+        </div>
+
+        <div class="windows-taskbar">
+        <div class="windows-taskbar">
+        <div class="taskbar-left">
+            <button class="win-start-btn" title="Start" aria-label="Start">
+                <img src="Screenshot 2026-10-14 000034.png" alt="Start Logo">
+            </button>
+        </div>
+        </div>
+
+    </div>
+    
+
+</body>
+</html>

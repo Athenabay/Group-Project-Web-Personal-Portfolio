@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Harazaki Daily - Master Frame</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,700;0,900;1,500&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<!-- 1. External CSS -->
+<link rel="stylesheet" href="csszaki/stylezaki.css">
+
+<!-- 2. Style Tag (Internal CSS) -->
+<style>
+  /* Menjamin tinggi iframe pas di dalam bingkai master */
+  .frame-container {
+    width: 100%;
+    margin-top: 15px;
+  }
+  iframe {
+    width: 100%;
+    height: 700px;
+    border: 1px solid var(--rule);
+    background-color: var(--paper);
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  
+  <!-- 3. Inline CSS -->
+  <header class="masthead">
+    <h1 style="text-align: center; color: var(--ink);">The Harazaki Daily</h1>
+    <div class="dateline">
+      <span id="tanggal">Latest Edition</span>
+      <span>President University</span>
+      <span>Seeking new experience</span>
+    </div>
+  </header>
+
+  <!-- Navigasi Utama yang Mengarahkan Konten ke Frame -->
+  <nav aria-label="Navigation">
+    <a href="pageszaki/homezaki.html" target="main-frame">Front Page</a>
+    <a href="pageszaki/projectzaki.html" target="main-frame">Coming Soon</a>
+    <a href="pageszaki/careerzaki.html" target="main-frame">Career News</a>
+    <a href="pageszaki/aboutzaki.html" target="main-frame">About Me</a>
+    <a href="pageszaki/contactzaki.html" target="main-frame">Classifieds & Form</a>
+  </nav>
+
+  <!-- Master Frame / Main Iframe -->
+  <main class="frame-container">
+    <iframe name="main-frame" src="pageszaki/homezaki.html"></iframe>
+  </main>
+
+  <footer>
+    © <span id="tahun">2026</span> Harazaki Hulu. Printed with HTML and a little nostalgia.
+    <button id="tema" type="button" aria-label="Switch between light and dark theme">Switch theme</button>
+    <a href="../main.html" class="foot-btn">Back to group web↑</a>
+  </footer>
+</div>
+
+
+</body>
+</html>

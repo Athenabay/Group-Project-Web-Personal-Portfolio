@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio — Akbar</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="description" content="personal portfolio of Akbar">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .hero{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden;background:#120d0a;isolation:isolate;container-type:size}
+
+        .bg,.cutout{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 100%;max-width:none;pointer-events:none}
+        .bg{z-index:0;filter:brightness(.66) saturate(1.05) contrast(1.06)}
+        .cutout{z-index:3;filter:brightness(.94) drop-shadow(0 12px 26px rgba(0,0,0,.5));animation:fade 1.3s ease .35s both}
+
+        .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+            background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,transparent 26%,transparent 58%,rgba(0,0,0,.7) 100%)}
+
+        .giant{position:absolute;z-index:2;left:0;right:0;margin:0;text-align:center;white-space:nowrap;pointer-events:none;
+                font-family:var(--display);font-weight:400;color:var(--red);
+                font-size:26vw;line-height:.82;letter-spacing:-.01em;
+                bottom:calc(max(100svh,56.25vw)*.36);
+                animation:rise 1.2s cubic-bezier(.2,.8,.2,1) both}
+        @supports (height:1cqh){
+        .giant{bottom:calc(max(100cqh,56.25cqw)*.36)}
+        }
+        @keyframes rise{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
+        @keyframes fade{from{opacity:0}to{opacity:1}}
+
+        .topbar{position:absolute;z-index:5;top:0;left:0;right:0;padding:clamp(18px,3vw,30px) var(--pad);
+        display:flex;justify-content:space-between;gap:16px;
+        font-size:clamp(11px,1.1vw,13px);letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:#efe6d4}
+
+        .hero-bottom{position:absolute;z-index:5;left:0;right:0;bottom:0;padding:0 var(--pad) clamp(18px,3vw,32px);
+            display:flex;justify-content:space-between;align-items:flex-end;gap:24px;
+            font-size:clamp(12px,1.1vw,14px);color:#efe6d4;animation:fadeUp 1s ease .7s both}
+        @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+        .hero-copy{margin:0;max-width:300px;line-height:1.5}
+        .hero-meta{display:flex;gap:clamp(14px,2.4vw,36px);flex-wrap:wrap;justify-content:flex-end}
+        .hero-meta a:hover{color:var(--red)}
+    </style>
+</head>
+<body>
+    <nav class="menu" aria-label="section">
+        <a href="#about">about</a>
+        <a href="#education">education</a>
+        <a href="#experience">experience</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+    <header class="hero" id="home">
+        <img class="bg" src="assetakbar/background-webnya.png" alt="">
+        <h1 class="giant" aria-label="Portfolio">PORTFOLIO</h1>
+        <img class="cutout" src="assetakbar/foto.png" alt="Abaysky bersinar">
+
+        <div class="topbar">
+            <span>Portfolio</span>
+            <span>Oct 11, 2026</span>
+        </div>
+
+        <div class="hero-bottom">
+            <p class="hero-copy">President university — Informatics Bachelor</p>
+                <div class="hero-meta">
+                  <a href="mailto:Abaysky22@gmail.com">Abaysky22@gmail.com</a>
+                  <a href="#contact">@Whybaysky</a>
+                  <span>Jakarta, Indonesia</span>
+                </div>
+        </div>
+    </header>
+
+    <div class="spines" aria-hidden="true"></div>
+
+    <section class="page" id="about">
+        <div class="bar"><span>Portfolio</span><span>01 / About</span></div>
+        <div class="about-grid">
+            <div class="about-text">
+                <h2 class="display reveal">Hello<br>I'm<span class="red"> Akbar</span></h2>
+                <p class="lead reveal">
+                    highly motivated and disciplined freshman at President University with a strong willingness to learn and grow. Adaptable and enjoying to explore new things.
+                </p>
+                <p class="reveal">
+                    Approach every project with curiosity, attention to detail, and a willingness to learn. I enjoy working on projects that allow me to explore technology, solve problems, and turn ideas into practical solutions. 
+                    When working with me, you can expect clear communication, a positive attitude, and a strong commitment to completing tasks responsibly while continuously improving along the way.
+                </p>
+                <ul class="chips reveal">
+                    <li>UI / UX Design</li><li>Web Development</li><li>3D design</li><li>Roblox Developer</li><li>Illustration</li>
+                </ul>
+
+                <div class="stats reveal">
+                    <!-- ==nantian aja bisa ditambah kalo dah kerja== -->
+                </div>
+            </div>
+            
+            <figure class="potrait reveal">
+                <img src="assetakbar/pasfoto-campus.jpeg" alt="pasfoto Abaysky">
+                <figcaption>Campus Photo</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="page alt" id="education">
+        <div class="bar"><span>Portfolio</span><span>02 / Education</span></div>
+        <h2 class="display reveal">Edu<span class="red">cation</span></h2>
+        <ol class="timeline">
+            <li class="reveal">
+                <span class="when">2026 — Now</span>
+                <div>
+                    <h3>President University</h3>
+                    <p class="sub">Bachelor of Informatics</p>
+                </div>
+            <li class="reveal">
+                <span class="when">2021 - 2024</span>
+                <h3>Bina Dharma Highschool</h3>
+                <p class="sub">Science</p>
+            </li>
+        </ol>
+    </section>
+
+    <section class="page" id="experience">
+        <div class="bar"><span>Portfolio</span><span>03 / Experience</span></div>
+        <h2 class="display reveal">Exper<span class="red">ience</span></h2>
+        <div class="xp">
+            <article class="xp-row reveal">
+                <span class="idx">01</span>
+                <div><h3>Head Of Patriot Muda Dormitory</h3><p class="sub">Patriot Muda</p></div>
+                <p class="desc">Led and coordinated dormitory residents in daily activities and official events. 
+                    <br> duty schedules, discipline, and dormitory cleanliness. 
+                    <br> Organized development activities, including evening study sessions, spiritual activities, and social programs.</p>
+                <span class="when">2025 — 2026</span>
+            </article>
+            <article class="xp-row reveal">
+                <span class="idx">02</span>
+                <div><h3>Vice President of Marching Band Club</h3><p class="sub">Highschool</p></div>
+                <p class="desc">Supported the coordination of club activities and school events.
+                    <br> Performed as a snare drummer and drum major.
+                    <br> Worked with team members to maintain discipline, coordination, and performance quality.</p>
+                <span class="when">2021 — 2023</span>
+            </article>
+             <article class="xp-row reveal">
+                <span class="idx">03</span>
+                <div><h3>Vice Class Leader</h3><p class="sub">Highschool</p></div>
+                <p class="desc">Assisted the class leader in managing class activities and student needs.
+                    <br> Helped maintain attendance, discipline, and classroom organization.
+                    <br> Coordinated classmates during group activities, community service, and school programs.</p>
+                <span class="when">2022 — 2023</span>
+            </article>
+        </div>
+    </section>
+    
+    <div class="spines" aria-hidden="true"></div>
+
+    <section class="page alt" id="contact">
+    <div class="bar"><span>Creative Portfolio</span><span>04 / Contact</span></div>
+    <a class="mega reveal" href="mailto:Abaysky22@gmail.com">Let’s<br>work <span class="red">together</span> ↗</a>
+    
+    <div class="contact-grid">
+        <div class="cards">
+            <div class="card reveal"><small>Email</small><a href="mailto:Abaysky22@gmail.com">*****@gmail.com</a></div>
+            <div class="card reveal"><small>Phone / WhatsApp</small><a href="tel:+6281319836648">+62 000 0000 0000</a></div>
+            <div class="card reveal"><small>Location</small><span>Your City, Country</span></div>
+            <div class="socials reveal">
+                <a href="https://www.instagram.com/whybaysky" target="_blank" rel="noopener">Instagram ↗</a>
+                <a href="www.linkedin.com/in/muhammadakbarutomoputrayuniar" target="_blank" rel="noopener">LinkedIn ↗</a>
+                <a href="https://github.com/Athenabay" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+        </div>
+
+        <div class="form-wrap reveal">
+            <form class="form" id="contact-form" action="#terkirim" method="post">
+                <label for="f-name">Full name
+                    <input id="f-name" name="name" type="text" required minlength="3" maxlength="40"
+                     pattern="[A-Za-z][A-Za-z .'\-]{2,39}" placeholder="Jane Doe" autocomplete="name">
+                    <small class="err">Enter 3–40 letters. Numbers are not allowed.</small>
+                </label>
+
+                <label for="f-email">Email
+                    <input id="f-email" name="email" type="email" required placeholder="jane@email.com" autocomplete="email">
+                    <small class="err">Enter a valid email, for example jane@email.com.</small>
+                </label>
+
+                <label for="f-pass">Password
+                    <input id="f-pass" name="password" type="password" required minlength="8"
+                     pattern="(?=.*[A-Za-z])(?=.*[0-9]).{8,}" placeholder="At least 8 characters" autocomplete="new-password">
+                    <small class="hint">Use 8+ characters with at least one letter and one number.</small>
+                    <small class="err">Password needs 8+ characters, with a letter and a number.</small>
+                </label>
+
+                <label for="f-topic">Topic
+                    <select id="f-topic" name="topic" required>
+                        <option value="" selected disabled>Choose a topic</option>
+                        <option value="project">Project collaboration</option>
+                        <option value="job">Job opportunity</option>
+                        <option value="freelance">Freelance work</option>
+                    </select>
+                    <small class="err">Pick a topic.</small>
+                </label>
+
+                <fieldset class="choices">
+                    <legend>Reply to me by</legend>
+                    <label class="choice" for="r-email"><input id="r-email" type="radio" name="reply" value="email" required> Email</label>
+                    <label class="choice" for="r-wa"><input id="r-wa" type="radio" name="reply" value="whatsapp"> WhatsApp</label>
+                    <label class="choice" for="r-call"><input id="r-call" type="radio" name="reply" value="call"> Phone call</label>
+                    <small class="err">Choose how you want to be contacted.</small>
+                </fieldset>
+
+                <label for="f-msg">Message
+                    <textarea id="f-msg" name="message" rows="4" required minlength="20" maxlength="500"
+                         placeholder="Tell me about your project (at least 20 characters)..."></textarea>
+                    <small class="err">Write 20–500 characters.</small>
+                </label>
+
+                <div class="agree">
+                    <label class="choice" for="f-agree">
+                        <input id="f-agree" name="agree" type="checkbox" required>
+                        I agree that my details may be used to reply to this message.
+                    </label>
+                    <small class="err">You need to agree before sending.</small>
+                </div>
+
+                <button type="submit" class="send" style="letter-spacing:.12em">Send message <i>→</i></button>
+            </form>
+
+            <p class="thanks" id="terkirim" role="status">Thank you! Your message passed all checks and is ready to send.</p>
+        </div>
+    </div>
+
+    <footer class="foot">
+        <span>© 2026 Muhammad Akbar Utomo Putra Yuniar. All rights reserved.</span>
+        <a href="../main.html" class="foot-btn">Back to group web↑</a>
+        <a href="#home">Back to top ↑</a>
+    </footer>
+
+</section>
+    
+</body>
+</html>

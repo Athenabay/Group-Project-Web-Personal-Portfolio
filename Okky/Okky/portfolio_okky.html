@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - Okky Christian</title>
+  <link rel="stylesheet" href="style_okky.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0f12;
+      color: #cbd5e1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 3rem 8%;
+      /* Memberikan jarak bawah agar konten tidak tertutup fixed footer */
+      padding-bottom: 90px;
+      box-sizing: border-box;
+    }
+    
+    .page-title {
+      font-size: 2.25rem;
+      color: #ffffff;
+      margin: 0 0 0.5rem 0;
+      font-weight: 800;
+    }
+
+    .subtitle {
+      color: #38bdf8;
+      margin-bottom: 2.5rem;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: #161b24;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: #38bdf8;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-banner {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .bg-blue   { background: linear-gradient(135deg, #0369a1, #0c4a6e); }
+    .bg-purple { background: linear-gradient(135deg, #3b0764, #1e1b4b); }
+    .bg-cyan   { background: linear-gradient(135deg, #0e7490, #164e63); }
+    .bg-orange { background: linear-gradient(135deg, #7c2d12, #451a03); }
+
+    .card-body {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-category {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #38bdf8;
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      color: #ffffff;
+      margin: 0 0 10px 0;
+      font-weight: 700;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: #94a3b8;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background: #0d0f12;
+      border: 1px solid #334155;
+      color: #cbd5e1;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.72rem;
+    }
+
+    /* Fixed Bottom Footer - Posisi di Kiri */
+    .fixed-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 55px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 2rem;
+      background: rgba(13, 17, 23, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+      box-sizing: border-box;
+    }
+
+    .footer-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      border-radius: 30px;
+      background: rgba(56, 189, 248, 0.12);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      transition: all 0.25s ease;
+    }
+
+    .footer-back-btn:hover {
+      background: #38bdf8;
+      color: #0d1117;
+      border-color: #38bdf8;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .footer-back-btn svg {
+      transition: transform 0.25s ease;
+    }
+
+    .footer-back-btn:hover svg {
+      transform: translateX(-3px);
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="page-title">Featured Projects & Activities</h1>
+  <p class="subtitle">A Showcase of Network Infrastructure, System Lab & Climbing Achievements</p>
+
+  <div class="portfolio-grid">
+    
+    <div class="project-card">
+      <div class="card-banner bg-blue">🌐</div>
+      <div class="card-body">
+        <span class="card-category">COMPUTER NETWORKING</span>
+        <h3 class="card-title">Enterprise LAN/WAN Topology</h3>
+        <p class="card-desc">Designed multi-VLAN routing, OSPF dynamic routing, and ACL security configurations using Cisco Packet Tracer.</p>
+        <div class="card-footer">
+          <span class="tag">Cisco Packet Tracer</span>
+          <span class="tag">VLAN & OSPF</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card">
+      <div class="card-banner bg-purple">🖥️</div>
+      <div class="card-body">
+        <span class="card-category">SYSTEM ADMINISTRATION</span>
+        <h3 class="card-title">Virtual Server Home Lab</h3>
+        <p class="card-desc">Configured Linux server instances, DNS, DHCP services, and local network testing setups via Oracle VirtualBox.</p>
+        <div class="card-footer">
+          <span class="tag">Oracle VirtualBox</span>
+          <span class="tag">Linux Server</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card">
+      <div class="card-banner bg-cyan">⚙️</div>
+      <div class="card-body">
+        <span class="card-category">IT INFRASTRUCTURE</span>
+        <h3 class="card-title">Network Maintenance & Troubleshooting</h3>
+        <p class="card-desc">Managed local hardware cabling, switch configurations, and user access control during full-time IT support duties.</p>
+        <div class="card-footer">
+          <span class="tag">Hardware</span>
+          <span class="tag">Troubleshooting</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card">
+      <div class="card-banner bg-orange">🧗‍♂️</div>
+      <div class="card-body">
+        <span class="card-category">SPORT CLIMBING & INSTRUCTION</span>
+        <h3 class="card-title">Climbing & Safety Coaching</h3>
+        <p class="card-desc">Instructed athletes and safety management at Bremgra Indonesia, applying discipline and accident-free belaying standards.</p>
+        <div class="card-footer">
+          <span class="tag">Climbing Instructor</span>
+          <span class="tag">Belayer</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Fixed Bottom Footer dengan Tombol di Kiri -->
+  <footer class="fixed-footer">
+    <a href="../../main.html" class="footer-back-btn" target="_top">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      <span>Back to group web</span>
+    </a>
+  </footer>
+
+</body>
+</html>

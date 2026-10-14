@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .master-title {
+            font-size: 30px;
+            margin: 20px 0;
+            letter-spacing: 1px;
+        }
+
+        .content-frame {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #d5deea;
+            border-radius: 12px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="master-title" style="color: #174ea6;">
+            My Personal Portfolio
+        </h1>
+        <p>Welcome to my personal website.</p>
+    </header>
+
+    <nav>
+        <a href="home.html" target="contentFrame">Home</a>
+        <a href="about.html" target="contentFrame">About</a>
+        <a href="skills.html" target="contentFrame">Skills</a>
+        <a href="projects.html" target="contentFrame">Projects</a>
+        <a href="contact.html" target="contentFrame">Contact</a>
+    </nav>
+
+    <main>
+        <iframe
+            class="content-frame"
+            name="contentFrame"
+            src="home.html"
+            title="Portfolio content">
+        </iframe>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Personal Portfolio</p>
+        <a href="../main.html" class="foot-btn">Back to group web↑</a>
+    </footer>
+
+</body>
+</html>
